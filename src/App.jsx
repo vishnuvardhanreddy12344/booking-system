@@ -6,19 +6,16 @@ import ShowDetails from './components/ShowDetails.jsx';
 import BookingForm from './components/BookingForm';
 import './App.css';
 
-const App = () => {
+function App() {
   return (
-
-   <BrowserRouter>
-    <Routes>
-      
-      <Route path="/" exact component={<ShowList/>} />
-      <Route path="/show/:id" component={<ShowDetails/>} />
-      <Route path="/booking/:id" component={<BookingForm/>} />
-
-  </Routes>
-   </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" exact element={<ShowList />} />
+        <Route path="/show/:id" element={<ShowDetails />} />
+        <Route path="/booking/:id" element={<BookingForm />} />
+      </Routes>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
